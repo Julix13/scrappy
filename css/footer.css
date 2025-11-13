@@ -1,0 +1,39 @@
+.footer-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(243, 255, 230, 0.95);
+  border-top: 1px solid #d8cfcf;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+  padding: 10px 0;
+  z-index: 100;  
+}
+
+.footer-menu nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-menu nav ul li{
+  padding: 20px 15px;
+  background-color: rgb(255, 84, 84);
+  border-radius: 30px;
+}
+
+.footer-menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.footer-menu li a:hover {
+  color: rgb(216, 59, 59);
+}
