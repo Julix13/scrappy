@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Timer</title>
+<style>
+  body {font-family:sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;margin:0;background:#111;color:rgb(2, 96, 2);}
+  #time {font-size:4em;}
+  button {margin:10px;padding:10px 20px;border:none;border-radius:8px;cursor:pointer;background:rgb(2, 96, 2);color:#111;font-weight:bold;}
+</style>
+</head>
+<body>
+  <div id="time">00:00:00</div>
+  <button onclick="start()">Start</button>
+  <button onclick="stop()">Stop</button>
+  <button onclick="reset()">Reset</button>
+
+<script>
+let s=0,run=0,interval;
+function start(){if(!run){run=1;interval=setInterval(()=>{s++;let h=Math.floor(s/3600),m=Math.floor(s/60)%60,sec=s%60;time.textContent=[h,m,sec].map(v=>String(v).padStart(2,'0')).join(':')},1000)}}
+function stop(){run=0;clearInterval(interval)}
+function reset(){stop();s=0;time.textContent='00:00:00'}
+</script>
+</body>
+</html>
+
+
